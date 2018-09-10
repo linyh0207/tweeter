@@ -15,6 +15,7 @@
 }
 
 #nav-bar .header{
+    margin-left: 10px;
     position: fixed;
     font-size: 2em;
     line-height:80px;
