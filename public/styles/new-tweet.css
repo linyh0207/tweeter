@@ -27,3 +27,7 @@ main.container .new-tweet .counter{
 main.container .new-tweet form{
     padding-bottom: 1em;
 }
+
+.red{
+    color: red;
+}
