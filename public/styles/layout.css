@@ -27,9 +27,7 @@ body {
  */
 
 main.container{
-  padding-left: 2em;
-  padding-right: 2em;
-  padding-top: 2em;
+  padding: 2em 2em 0em 2em;
   margin: 80px auto;
   width: 450px;
   background-color: white;
