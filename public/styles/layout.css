@@ -19,6 +19,7 @@ body {
   color: #244751;
   background-color: #eee;
   font-family: 'Roboto Condensed', sans-serif;
+  display: flex;
 }
 
 /*
@@ -26,7 +27,12 @@ body {
  */
 
 main.container{
-  margin: 140px auto;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 2em;
+  margin: 80px auto;
   width: 450px;
   background-color: white;
 }
+
+/* position: relative */
