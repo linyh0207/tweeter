@@ -4,7 +4,7 @@
     border: 1px solid rgba(175, 175, 175, 0.3);
 }
 
-.tweet header{
+.tweet .user{
     opacity: 0.5;
     background-color: #eeeeee;
     display: flex;
@@ -15,12 +15,12 @@
 
 }
 
-.tweet header p {
+.tweet .user .handle {
     margin-top:0px;
 }
 
 
-.tweet .profilePic{
+.tweet .avatars{
     height:80px;
     width: 80px;
     float:left;
@@ -28,13 +28,13 @@
 }
 
 
-.tweet h2{
+.tweet .name {
     padding-left:10px;
     width:50%;
     margin-top: 0;
 }
 
-.tweet div{
+.tweet .content .text{
     margin-left:10px;
 }
 
@@ -45,7 +45,7 @@
     justify-content: space-between;
 }
 
-.tweet footer p {
+.tweet footer .created_at {
     margin-left:10px;
     height:40px;
 }

@@ -52,27 +52,41 @@ const data = [
     }
   ];
   
+
+$(function(){
+  
   function renderTweets(tweets) {
 
-    // loops through tweets
-      // calls createTweetElement for each tweet
-      // takes return value and appends it to the tweets container
-  }
+    for (let object of tweets){
+      $(".tweetContainer").append(createTweetElement(object))
+    }
+  };
+    
   
   function createTweetElement(tweet) {
-    let $tweet = $('<article>').addClass('tweet').append(user, content, created_at);
-    let $user = $('<header>').addClass('user').append(name, avatars, handle);
-    let $name = $('<h2>').addClass('name')
-    let $avatars = $('<div>').addClass('avatars').append(small, regular, large);
-    let $small = $('<img>').addClass('small');
-    let $regular = $('<img>').addClass('regular');
-    let $large = $('<img>').addClass('large');
-    let $handle = $('<p>').addClass('handle');
-    let $content = $('<div>').addClass('content').append(text);
-    let $text = $('<p>').addClass('text');
-    let $created_at = $('<footer>').addClass('created_at');
+    let $tweet = $('<article>').addClass('tweet');
+    let $user = $('<header>').addClass('user');
+    let $avatars = $('<img>').addClass('avatars').attr("src", tweet.user.avatars.small);
+    let $name = $('<h2>').addClass('name').text(tweet.user.name);
+    let $handle = $('<p>').addClass('handle').text(tweet.user.handle);
+    let $content = $('<p>').addClass('content');
+    let $text = $('<p>').addClass('text').text(tweet.content.text);
+    let $created_at = $('<p>').addClass('created_at').text(tweet.created_at);
+    let $footer = $('<footer>');
+    let $twitterIcons = $('<div>').addClass('twitterIcons').append(`<span style="display:bliock;"><img class="icons" src="/images/twitterIcons.png"></span>`)
+   
 
+    $tweet.append($user, $content, $footer);
+    $user.append($avatars, $name, $handle);
+    $content.append($text);
+    $footer.append($created_at, $twitterIcons);
+    
     return $tweet;
-  }
-  
+  };
+
   renderTweets(data);
+
+})
+
+
+
