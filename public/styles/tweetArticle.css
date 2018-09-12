@@ -1,10 +1,10 @@
-#article .tweet {
+.tweet {
     margin-top:10px;
     border-radius: 5px; 
     border: 1px solid rgba(175, 175, 175, 0.3);
 }
 
-#article .tweet header{
+.tweet header{
     opacity: 0.5;
     background-color: #eeeeee;
     display: flex;
@@ -15,12 +15,12 @@
 
 }
 
-#article .tweet header p {
+.tweet header p {
     margin-top:0px;
 }
 
 
-#article .tweet .profilePic{
+.tweet .profilePic{
     height:80px;
     width: 80px;
     float:left;
@@ -28,47 +28,47 @@
 }
 
 
-#article .tweet h2{
+.tweet h2{
     padding-left:10px;
     width:50%;
     margin-top: 0;
 }
 
-#article .tweet div{
+.tweet div{
     margin-left:10px;
 }
 
-#article .tweet footer {
+.tweet footer {
     font-size:10px;
     border-top: 0.5px solid lightgrey;
     display: flex;
     justify-content: space-between;
 }
 
-#article .tweet footer p {
+.tweet footer p {
     margin-left:10px;
     height:40px;
 }
 
-#article .tweet footer .icons{
+.twitterIcons .icons{
     width: 60px;
     height: 60px;
     float: right;
     padding:1px;
 }
 
-#twitterIcons {
+.twitterIcons {
     display:none;
 }
 
-#article:hover #twitterIcons{
-    display:inline-block;
+.tweetContainer:hover .twitterIcons{
+    display: inline-block;
 }
 
-#article .tweet:hover {
+.tweet:hover {
     border: 1px solid rgba(175, 175, 175, 1);
 }
 
-#article .tweet:hover header.tweet-header {
+.tweet:hover header{
     opacity: 1;
 }
