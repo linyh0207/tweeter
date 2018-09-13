@@ -38,27 +38,38 @@ $(function(){
   var $button = $('form#newTweet');
   
   $button.on('submit', function (e) {
-    e.preventDefault();
     
+    e.preventDefault();
+
+    let inputLength = $('textarea').val().length
     let formData = $('form#newTweet').serialize();
+    if (!inputLength){
+      alert('The input is empty!');
+    } else if (inputLength > 140 ){
+      alert('The input is too long!')
+      } else {
+        $.ajax('/tweets/',{
+          method: 'POST',
+          data: formData
+        }).then(function () {
+          $('.tweetContainer').empty();
+          $('textarea').val('');
+          $('.counter').text('140');
+          return $.ajax('/tweets/');
+        }).then(renderTweets);
+  }
+});
 
-    $.ajax('/tweets/',{
-      method: 'POST',
-      data: formData
-    }).then(function () {
-      $('.tweetContainer').empty();
-      $('textarea').val('');
-      return $.ajax('/tweets/');
-    }).then(renderTweets);
-  });
-
-let loadTweets = function (){ 
-      $.ajax('/tweets/', { method: 'GET' })
-      .then(function (tweetlog) {
+function loadTweets (){ 
+      $.ajax('/tweets/', { 
+        method: 'GET', 
+        success: function(tweetlog){
         renderTweets(tweetlog);
-    });
-  };
+        }
+      })
+    }
   loadTweets();
+
 });
 
 
