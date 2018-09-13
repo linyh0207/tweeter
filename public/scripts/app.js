@@ -64,13 +64,13 @@ $(function(){
 function loadTweets (){ 
       $.ajax('/tweets/', { 
         method: 'GET', 
-        success: function(tweetlog){
-        renderTweets(tweetlog);
+        success: function(data){
+        renderTweets(data);
         }
       })
     }
   loadTweets();
 
-});
+}); 
 
 
