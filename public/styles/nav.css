@@ -22,3 +22,20 @@
     line-height:80px;
     float:left;
 }
+
+#nav-bar .compose{
+    display:fixed;
+    float:right;
+    margin-top:15px;
+    margin-right:50px;
+    padding: 10px;
+    background-color:#99e8dc;
+    color:#00a087;
+    font-size:20px;
+}
+
+#nav-bar .compose:hover{
+    background-color:white;
+    color:black;
+    cursor:pointer;
+}

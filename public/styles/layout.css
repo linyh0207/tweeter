@@ -32,5 +32,9 @@ main.container{
   width: 450px;
   background-color: white;
 }
+main.container #new-tweet #errorMsg{
+  float: right;
+  padding-right: 150px;
+}
 
 /* position: relative */

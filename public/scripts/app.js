@@ -8,7 +8,7 @@
 $(function(){
   function renderTweets(tweets) {
     for (let object of tweets){
-      $(".tweetContainer").append(createTweetElement(object));
+      $(".tweetContainer").prepend(createTweetElement(object));
     }
   };
     
