@@ -44,9 +44,9 @@ $(function(){
     let inputLength = $('textarea').val().length
     let formData = $('form#newTweet').serialize();
     if (!inputLength){
-      $('.errorMsg').text('The input is empty!');
+      $('.errorMsg').text('field is required.');
     } else if (inputLength > 140 ){
-      $('.errorMsg').text('The input is too long!');
+      $('.errorMsg').text('Maximum characeters exceeded');
       } else {
         $.ajax('/tweets/',{
           method: 'POST',
