@@ -44,9 +44,9 @@ $(function(){
     let inputLength = $('textarea').val().length
     let formData = $('form#newTweet').serialize();
     if (!inputLength){
-      alert('The input is empty!');
+      $('.errorMsg').text('The input is empty!');
     } else if (inputLength > 140 ){
-      alert('The input is too long!')
+      $('.errorMsg').text('The input is too long!');
       } else {
         $.ajax('/tweets/',{
           method: 'POST',
@@ -55,6 +55,7 @@ $(function(){
           $('.tweetContainer').empty();
           $('textarea').val('');
           $('.counter').text('140');
+          $('.errorMsg').empty();
           return $.ajax('/tweets/');
         }).then(renderTweets);
   }

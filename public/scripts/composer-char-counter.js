@@ -5,9 +5,9 @@ $(function() {
         var counter = $(this).siblings('span.counter');
         counter.text(maxWordLimit - length);
         if (length > maxWordLimit){
-        counter.addClass('red')
+        counter.addClass('red');
        } else {
-        counter.removeClass('red')
+        counter.removeClass('red');
        }
    })
   });

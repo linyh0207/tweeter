@@ -27,14 +27,19 @@ body {
  */
 
 main.container{
-  padding: 2em 2em 0em 2em;
+  padding: 2em;
   margin: 80px auto;
   width: 450px;
   background-color: white;
 }
-main.container #new-tweet #errorMsg{
+main.container .new-tweet .errorMsg {
+  font-size: 80%;
   float: right;
-  padding-right: 150px;
+  padding-right: 180px;
 }
+
+
+
+
 
 /* position: relative */
