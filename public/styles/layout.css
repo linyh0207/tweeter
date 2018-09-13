@@ -35,7 +35,7 @@ main.container{
 main.container .new-tweet .errorMsg {
   font-size: 80%;
   float: right;
-  padding-right: 180px;
+  padding-right: 10px;
   color: red;
   font-weight: bold;
 }

@@ -17,6 +17,7 @@
 
 .tweet .user .handle {
     margin-top:0px;
+    flex-basis: 15%;
 }
 
 
@@ -24,7 +25,10 @@
     height:80px;
     width: 80px;
     float:left;
-    border-radius: 5px; 
+    border-radius: 5px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 25%; 
 }
 
 
@@ -32,10 +36,14 @@
     padding-left:10px;
     width:50%;
     margin-top: 0;
+    flex-basis: 50%;
 }
 
 .tweet .content .text{
     margin-left:10px;
+    min-height: 50px;
+    word-wrap: break-word;
+    padding-right: 10px;
 }
 
 .tweet footer {
@@ -46,7 +54,7 @@
 }
 
 .tweet footer .created_at {
-    margin-left:10px;
+    margin:25px 0px 0px 10px;
     height:40px;
 }
 
