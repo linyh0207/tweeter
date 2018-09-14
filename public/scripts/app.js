@@ -12,6 +12,7 @@ $(function(){
   };
     
   function createTweetElement(tweet) {
+      
     let $tweet = $('<article>').addClass('tweet');
     let $user = $('<header>').addClass('user');
     let $avatars = $('<img>').addClass('avatars').attr("src", tweet.user.avatars.small);
@@ -19,7 +20,7 @@ $(function(){
     let $handle = $('<p>').addClass('handle').text(tweet.user.handle);
     let $content = $('<p>').addClass('content');
     let $text = $('<p>').addClass('text').text(tweet.content.text);
-    let $created_at = $('<p>').addClass('created_at').text(tweet.created_at);
+    let $created_at = $('<p>').addClass('created_at').text(moment(tweet.created_at).fromNow());
     let $footer = $('<footer>');
     let $twitterIcons = $('<div>').addClass('twitterIcons').append(`<span><img id="heart" src="/images/heart.png"></span><span><img id="heartFilled" src="/images/heartFilled.png"></span>`)
     let $likesCounter = $('<span>').addClass('likesCounter')
@@ -30,6 +31,8 @@ $(function(){
     $content.append($text);
     $footer.append($created_at, $twitterIcons, $likesCounter);
     
+  
+
     return $tweet;
     };
   
