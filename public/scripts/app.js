@@ -24,7 +24,7 @@ $(function(){
     let $created_at = $('<p>').addClass('created_at').text(tweet.created_at);
     let $footer = $('<footer>');
     let $twitterIcons = $('<div>').addClass('twitterIcons').append(`<span><img id="heart" src="/images/heart.png"></span><span><img id="heartFilled" src="/images/heartFilled.png"></span>`)
-    let $likesCounter = $('<span>').addClass('likesCounter');
+    let $likesCounter = $('<span>').addClass('likesCounter').text(tweet.likesCounter);
   
 
     $tweet.append($user, $content, $footer);
