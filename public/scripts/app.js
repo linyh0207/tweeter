@@ -4,7 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// Fake data taken from tweets.json
 $(function(){
   function renderTweets(tweets) {
     for (let object of tweets){
@@ -12,7 +11,6 @@ $(function(){
     }
   };
     
-  
   function createTweetElement(tweet) {
     let $tweet = $('<article>').addClass('tweet');
     let $user = $('<header>').addClass('user');
@@ -25,7 +23,6 @@ $(function(){
     let $footer = $('<footer>');
     let $twitterIcons = $('<div>').addClass('twitterIcons').append(`<span style="display:bliock;"><img class="icons" src="/images/twitterIcons.png"></span>`)
    
-
     $tweet.append($user, $content, $footer);
     $user.append($avatars, $name, $handle);
     $content.append($text);
@@ -33,12 +30,9 @@ $(function(){
     
     return $tweet;
     };
-
   
   var $button = $('form#newTweet');
-  
   $button.on('submit', function (e) {
-    
     e.preventDefault();
 
     let inputLength = $('textarea').val().length
@@ -68,9 +62,8 @@ function loadTweets (){
         renderTweets(data);
         }
       })
-    }
+    } 
   loadTweets();
-
 }); 
 
 

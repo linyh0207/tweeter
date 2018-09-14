@@ -5,7 +5,7 @@ $('.compose').click(function(){
         $('textarea').focus();
     } else{
         $('.new-tweet').hide();
-    }
+        }
     })
 });  
  

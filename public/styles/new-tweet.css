@@ -17,7 +17,6 @@ main.container .new-tweet{
     border: 0.5px solid lightgrey;
 }
 
-
 main.container .new-tweet .counter{
     float:right;
     font-style: italic;
