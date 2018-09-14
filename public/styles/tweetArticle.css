@@ -4,6 +4,14 @@
     border: 1px solid rgba(175, 175, 175, 0.3);
 }
 
+.tweet:hover {
+    border: 1px solid rgba(175, 175, 175, 1);
+}
+
+.tweet:hover header{
+    opacity: 1;
+}
+
 .tweet .user{
     opacity: 0.5;
     background-color: #eeeeee;
@@ -11,7 +19,6 @@
     padding: 10px;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
-    justify-content: space-between;
 
 }
 
@@ -56,27 +63,49 @@
 .tweet footer .created_at {
     margin:25px 0px 0px 10px;
     height:40px;
-}
-
-.twitterIcons .icons{
-    width: 60px;
-    height: 60px;
-    float: right;
-    padding:1px;
+    flex-basis: 75%;
 }
 
 .twitterIcons {
-    display:none;
+    flex-basis: 10%;
 }
 
-.tweetContainer:hover .twitterIcons{
+#heart{
+    width: 40px;
+    height: 40px;
+    float: right;
+    padding:1px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+#heartFilled{
+    width: 40px;
+    height: 40px;
+    float: right;
+    padding:1px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+#heart {
     display: inline-block;
 }
 
-.tweet:hover {
-    border: 1px solid rgba(175, 175, 175, 1);
+#heartFilled {
+    display:none;
 }
 
-.tweet:hover header{
-    opacity: 1;
+.twitterIcons:hover #heart{
+    display: none;
+}
+
+.twitterIcons:hover #heartFilled{
+    display: inline-block;
+    cursor: pointer; */
+}
+
+footer .likesCounter {
+    margin-top: 30px;
+    flex-basis: 5%;
 }
