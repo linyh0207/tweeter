@@ -1,0 +1,1 @@
+node-sass --include-path scss portfolio/scss/main.scss portfolio/public/css/main.css
