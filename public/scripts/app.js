@@ -22,14 +22,17 @@ $(function(){
     let $text = $('<p>').addClass('text').text(tweet.content.text);
     let $created_at = $('<p>').addClass('created_at').text(moment(tweet.created_at).fromNow());
     let $footer = $('<footer>');
-    let $twitterIcons = $('<div>').addClass('twitterIcons').append(`<span><img id="heart" src="/images/heart.png"></span><span><img id="heartFilled" src="/images/heartFilled.png"></span>`)
-    let $likesCounter = $('<span>').addClass('likesCounter')
+    let $twitterIcons = $('<div>').addClass('twitterIcons').attr('postid',tweet._id).attr('likestatus',tweet.likeStatus);
+  
+    
+    // .append(`<span><img id="heart" src="/images/heart.png"></span><span><img id="heartFilled" src="/images/heartFilled.png"></span>`)
+  
   
 
     $tweet.append($user, $content, $footer);
     $user.append($avatars, $name, $handle);
     $content.append($text);
-    $footer.append($created_at, $twitterIcons, $likesCounter);
+    $footer.append($created_at, $twitterIcons);
     
   
 

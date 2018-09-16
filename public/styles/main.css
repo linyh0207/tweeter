@@ -30,6 +30,7 @@ html {
   box-sizing: inherit; }
 
 #nav-bar {
+  display: flex;
   position: fixed;
   top: 0;
   height: 80px;
@@ -37,23 +38,24 @@ html {
   padding: 0px 2em 0px 2em;
   color: #e8fdff;
   background-color: #00a087;
-  z-index: 10; }
+  z-index: 10;
+  justify-content: space-between; }
   #nav-bar .logo {
-    height: 80px;
-    width: 80px;
-    float: left; }
+    height: 6em;
+    width: 6em;
+    flex-grow: 0;
+    flex-shrink: 0; }
   #nav-bar .header {
     margin-left: 10px;
-    position: fixed;
     font-size: 2em;
-    line-height: 80px;
-    float: left; }
+    line-height: 80px; }
   #nav-bar .composeButton {
     display: flex;
-    float: right;
+    width: 8em;
     border-radius: 5px;
-    margin-top: 2.5px;
+    margin-top: 5px;
     margin-right: 50px;
+    margin-bottom: 5px;
     padding: 5px;
     background-color: #e5ffe5;
     color: #003300;
@@ -109,20 +111,23 @@ main.container .new-tweet {
     border-top-left-radius: 5px; }
     .tweet .user .handle {
       margin-top: 0px;
-      flex-basis: 15%; }
-  .tweet .avatars {
-    height: 80px;
-    width: 80px;
-    float: left;
-    border-radius: 5px;
-    flex-grow: 0;
-    flex-shrink: 0;
-    flex-basis: 25%; }
-  .tweet .name {
-    padding-left: 10px;
-    width: 50%;
-    margin-top: 0;
-    flex-basis: 50%; }
+      flex-basis: 35%;
+      padding-left: 60px; }
+    .tweet .user .avatars {
+      height: 80px;
+      width: 80px;
+      float: left;
+      border-radius: 5px;
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: 25%; }
+    .tweet .user .name {
+      padding-left: 10px;
+      width: 40%;
+      margin-top: 0;
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: 30%; }
   .tweet .content .text {
     margin-left: 10px;
     min-height: 50px;
@@ -137,29 +142,6 @@ main.container .new-tweet {
       margin: 25px 0px 0px 10px;
       height: 40px;
       flex-basis: 75%; }
-    .tweet footer .likesCounter {
-      margin-top: 30px;
-      flex-basis: 5%; }
   .tweet .twitterIcons {
-    flex-basis: 10%; }
-    .tweet .twitterIcons:hover #heart {
-      display: none; }
-    .tweet .twitterIcons:hover #heartFilled {
-      display: inline-block;
-      cursor: pointer; }
-  .tweet #heart {
-    width: 40px;
-    height: 40px;
-    float: right;
-    padding: 1px;
-    margin-top: 10px;
-    margin-right: 10px;
-    display: inline-block; }
-  .tweet #heartFilled {
-    display: none;
-    width: 40px;
-    height: 40px;
-    float: right;
-    padding: 1px;
-    margin-top: 10px;
-    margin-right: 10px; }
+    flex-basis: 10%;
+    cursor: pointer; }

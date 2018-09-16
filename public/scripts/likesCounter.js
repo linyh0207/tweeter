@@ -1,21 +1,27 @@
 $(document).ready(function() {
-    // If someone click the button, send POST request using Ajax 
-        // to either add a record  / update a record
-    
+  $('body').on('click','footer .twitterIcons', function(){
+      let likeStatus = $('.twitterIcons').attr('likestatus');
+      if (likeStatus === "unlike"){
+          console.log("like");
+        $('.twitterIcons').text('like');
+        togglePost('unlike');
+      } else {
+        $('.twitterIcons').text('unlike');
+        togglePost('like');
+      }
 
-
-
-
-
-
-    // Using Ajax to GET the current count from the MongoDB 
-    // The data receive is a string, need to parseInt() for count
-    // Update the likescounter display numbers 
-
-
-    let count = 0;
-    $("body").on("click", 'footer .twitterIcons', function(e) {
-        count ++;
-        $('.likesCounter').text(count);
-      });
+      function togglePost(likeStatus){
+        $.ajax('/tweets/like',{
+            method: 'POST',
+            data: likeStatus,
+            success: function(data){
+                alert("success");
+                console.log(data);
+            },
+            error: function(e){
+                alert("error");
+            }
+        });
+      }
+    });
 });

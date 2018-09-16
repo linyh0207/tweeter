@@ -20,23 +20,26 @@
         border-top-left-radius: 5px;
         .handle {
             margin-top:0px;
-            flex-basis: 15%;
+            flex-basis: 35%;
+            padding-left:60px;
         }
-    }
-    .avatars{
-        height:80px;
-        width: 80px;
-        float:left;
-        border-radius: 5px;
-        flex-grow: 0;
-        flex-shrink: 0;
-        flex-basis: 25%; 
-    }
-    .name {
-        padding-left:10px;
-        width:50%;
-        margin-top: 0;
-        flex-basis: 50%;
+        .avatars{
+            height:80px;
+            width: 80px;
+            float:left;
+            border-radius: 5px;
+            flex-grow: 0;
+            flex-shrink: 0;
+            flex-basis: 25%;
+        }
+        .name {
+            padding-left:10px;
+            width:40%;
+            margin-top: 0;
+            flex-grow: 0;
+            flex-shrink: 0;
+            flex-basis: 30%;
+        }
     }
     .content .text{
         margin-left:10px;
@@ -54,41 +57,36 @@
             height:40px;
             flex-basis: 75%;
         }
-        .likesCounter {
-            margin-top: 30px;
-            flex-basis: 5%;
-        }
+        
     }
     .twitterIcons {
         flex-basis: 10%;
-        &:hover{
-            #heart{
-                display: none;
-            }
-            #heartFilled{
-                display: inline-block;
-                cursor: pointer;
-            }
-        }
+        cursor: pointer;
+        // &:hover{
+        //     #heart{
+        //         display: none;
+        //     }
+        //     #heartFilled{
+        //         display: inline-block;
+        //     }
+        // }
     }
-    #heart{
-        width: 40px;
-        height: 40px;
-        float: right;
-        padding:1px;
-        margin-top: 10px;
-        margin-right: 10px;
-        display: inline-block;
-    }
-    #heartFilled{
-        display:none;
-        width: 40px;
-        height: 40px;
-        float: right;
-        padding:1px;
-        margin-top: 10px;
-        margin-right: 10px;
-    }
+    // #heart{
+    //     width: 40px;
+    //     height: 40px;
+    //     float: right;
+    //     padding:1px;
+    //     margin-top: 10px;
+    //     margin-right: 10px;
+    // }
+    // #heartFilled{
+    //     display:none;
+    //     width: 40px;
+    //     height: 40px;
+    //     float: right;
+    //     padding:1px;
+    //     margin-top: 10px;
+    //     margin-right: 10px;
+    // }
 
 }
-

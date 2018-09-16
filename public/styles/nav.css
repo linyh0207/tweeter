@@ -1,0 +1,39 @@
+#nav-bar {
+  display: flex;
+  position: fixed;
+  top: 0;
+  height: 80px;
+  width: 100vw;
+  padding: 0px 2em 0px 2em;
+  color: #e8fdff;
+  background-color: #00a087;
+  z-index: 10;
+  justify-content: space-between; }
+  #nav-bar .logo {
+    height: 6em;
+    width: 6em;
+    flex-grow: 0;
+    flex-shrink: 0; }
+  #nav-bar .header {
+    margin-left: 10px;
+    font-size: 2em;
+    line-height: 80px; }
+  #nav-bar .composeButton {
+    display: flex;
+    width: 8em;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-right: 50px;
+    margin-bottom: 5px;
+    padding: 5px;
+    background-color: #e5ffe5;
+    color: #003300;
+    font-size: 20px; }
+    #nav-bar .composeButton:hover {
+      filter: grayscale(100%);
+      cursor: pointer; }
+  #nav-bar #composeIcon {
+    height: 60px;
+    width: 60px; }
+    #nav-bar #composeIcon:hover {
+      filter: grayscale(100%); }

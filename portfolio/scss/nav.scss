@@ -1,4 +1,5 @@
 #nav-bar{
+    display: flex;
     position: fixed;
     top: 0;
     height: 80px;
@@ -7,24 +8,25 @@
     color:  #e8fdff;
     background-color: #00a087;
     z-index: 10;
+    justify-content: space-between;
     .logo{
-        height:80px;
-        width: 80px;
-        float: left;
+        height:6em;
+        width: 6em;
+        flex-grow:0;
+        flex-shrink: 0;
     }
     .header{
         margin-left: 10px;
-        position: fixed;
         font-size: 2em;
         line-height:80px;
-        float:left;
     }
     .composeButton{
         display:flex;
-        float:right;
+        width: 8em;
         border-radius: 5px;
-        margin-top: 2.5px;
+        margin-top: 5px;
         margin-right:50px;
+        margin-bottom: 5px;
         padding: 5px;
         background-color:#e5ffe5;
         color:#003300;

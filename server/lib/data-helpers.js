@@ -17,7 +17,12 @@ module.exports = function makeDataHelpers(db) {
         db.collection("tweets").find().toArray((err, tweets) =>{
           callback(null, tweets);
         });
-      }
-    }
+    },
+    
+    updateTweets: function(update, callback){
+      db.collection("tweets").findandModify({_id:$('.twitterIcons').attr('postid')},{$set:{likeStatus:update}});
+        callback(null, true);
+    },
+  }
 };
  
