@@ -12,9 +12,15 @@ This repository is the starter code for the project: Students will fork and clon
 4. Go to <http://localhost:8080/> in your browser.
 
 ## Dependencies
-
 - Express
 - Node 5.10.x or above
 - Body-parser
 - Chance
 - Mongodb
+
+## ScreenShots
+!["Sreenshot of index page"](https://github.com/linyh0207/tweeter/blob/master/docs/Index.png?raw=true)
+
+!["Sreenshot of error Message"](https://github.com/linyh0207/tweeter/blob/master/docs/errorMessage.png?raw=true)
+
+!["Sreenshot of like Buttom"](https://github.com/linyh0207/tweeter/blob/master/docs/heartButtom.png?raw=true)
