@@ -1,7 +1,5 @@
 "use strict";
 
-// Simulates the kind of delay we see with network or filesystem operations
-// const simulateDelay = require("./util/simulate-delay");
 
 // Defines helper functions for saving and getting tweets, using the database `db`
 module.exports = function makeDataHelpers(db) {
@@ -19,10 +17,10 @@ module.exports = function makeDataHelpers(db) {
         });
     },
     
-    updateTweets: function(update, callback){
-      db.collection("tweets").findandModify({_id:$('.twitterIcons').attr('postid')},{$set:update});
-        callback(null, true);
-    },
+    // updateTweets: function(update, callback){
+    //   db.collection("tweets").findandModify({_id:$('.twitterIcons').attr('postid')},{$set:'update'});
+    //     callback(null, true);
+    // },
   }
 };
  

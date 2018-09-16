@@ -30,11 +30,13 @@ MongoClient.connect(MONGODB_URI, (err, db) => {
 // so it can define routes that use it to interact with the data layer.
   const tweetsRoutes = require("./routes/tweets")(DataHelpers);
 
-  const likeRoutes = require("./routes/like")(DataHelpers);
+  // const likeRoutes = require("./routes/like")(DataHelpers);
+
+  
 // Mount the tweets routes at the "/tweets" path prefix:
   app.use("/tweets", tweetsRoutes);
 
-  app.use("/tweets/like", likeRoutes);
+  // app.use("/tweets/like", likeRoutes);
 
   app.listen(PORT, () => {
     console.log("Example app listening on port " + PORT);

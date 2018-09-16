@@ -26,9 +26,6 @@ html {
       color: red;
       font-weight: bold; }
 
-*, *:before, *:after {
-  box-sizing: inherit; }
-
 #nav-bar {
   display: flex;
   position: fixed;
