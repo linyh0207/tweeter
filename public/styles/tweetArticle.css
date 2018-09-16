@@ -4,6 +4,8 @@
   border: 1px solid rgba(175, 175, 175, 0.3); }
   .tweet:hover {
     border: 1px solid #afafaf; }
+    .tweet:hover #heart {
+      display: inline-block; }
     .tweet:hover header {
       opacity: 1; }
     .tweet:hover footer {
@@ -50,4 +52,27 @@
       flex-basis: 75%; }
   .tweet .twitterIcons {
     flex-basis: 10%;
-    cursor: pointer; }
+    cursor: pointer;
+    font-size: 1.5em;
+    margin-top: 5px;
+    color: red; }
+    .tweet .twitterIcons:hover #heart {
+      display: none; }
+    .tweet .twitterIcons:hover #heartFilled {
+      display: inline-block; }
+  .tweet #heart {
+    display: none;
+    width: 40px;
+    height: 40px;
+    float: right;
+    padding: 1px;
+    margin-top: 10px;
+    margin-right: 10px; }
+  .tweet #heartFilled {
+    display: none;
+    width: 40px;
+    height: 40px;
+    float: right;
+    padding: 1px;
+    margin-top: 10px;
+    margin-right: 10px; }

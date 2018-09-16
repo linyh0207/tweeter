@@ -20,7 +20,7 @@ module.exports = function makeDataHelpers(db) {
     },
     
     updateTweets: function(update, callback){
-      db.collection("tweets").findandModify({_id:$('.twitterIcons').attr('postid')},{$set:{likeStatus:update}});
+      db.collection("tweets").findandModify({_id:$('.twitterIcons').attr('postid')},{$set:update});
         callback(null, true);
     },
   }
