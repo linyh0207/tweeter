@@ -1,1 +1,1 @@
-node-sass -w portfolio/scss/ -o portfolio/public/css/
+node-sass -w portfolio/scss/ -o public/styles/

@@ -1,0 +1,165 @@
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box; }
+  html body {
+    margin: 0;
+    color: #244751;
+    background-color: #eee;
+    font-family: 'Roboto Condensed', sans-serif;
+    display: flex; }
+  html main.container {
+    padding: 2em;
+    margin: 80px auto;
+    width: 450px;
+    background-color: white; }
+    html main.container .new-tweet .errorMsg {
+      font-size: 80%;
+      float: right;
+      padding-right: 10px;
+      color: red;
+      font-weight: bold; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+#nav-bar {
+  position: fixed;
+  top: 0;
+  height: 80px;
+  width: 100vw;
+  padding: 0px 2em 0px 2em;
+  color: #e8fdff;
+  background-color: #00a087;
+  z-index: 10; }
+  #nav-bar .logo {
+    height: 80px;
+    width: 80px;
+    float: left; }
+  #nav-bar .header {
+    margin-left: 10px;
+    position: fixed;
+    font-size: 2em;
+    line-height: 80px;
+    float: left; }
+  #nav-bar .composeButton {
+    display: flex;
+    float: right;
+    border-radius: 5px;
+    margin-top: 2.5px;
+    margin-right: 50px;
+    padding: 5px;
+    background-color: #e5ffe5;
+    color: #003300;
+    font-size: 20px; }
+    #nav-bar .composeButton:hover {
+      filter: grayscale(100%);
+      cursor: pointer; }
+  #nav-bar #composeIcon {
+    height: 60px;
+    width: 60px; }
+    #nav-bar #composeIcon:hover {
+      filter: grayscale(100%); }
+
+main.container .new-tweet {
+  border-radius: 5px;
+  background-color: #eeeeee;
+  width: 100%;
+  margin: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 0.5px solid lightgrey; }
+  main.container .new-tweet textarea {
+    padding: 5px;
+    width: 100%; }
+  main.container .new-tweet h2 {
+    border-bottom: 0.5px solid black; }
+  main.container .new-tweet .counter {
+    float: right;
+    font-style: italic;
+    font-size: 80%; }
+  main.container .new-tweet form {
+    padding-bottom: 1em; }
+
+.red {
+  color: red; }
+
+.tweet {
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(175, 175, 175, 0.3); }
+  .tweet:hover {
+    border: 1px solid #afafaf; }
+    .tweet:hover header {
+      opacity: 1; }
+    .tweet:hover footer {
+      border-top: 1px solid #afafaf; }
+  .tweet .user {
+    opacity: 0.5;
+    background-color: #eeeeee;
+    display: flex;
+    padding: 10px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px; }
+    .tweet .user .handle {
+      margin-top: 0px;
+      flex-basis: 15%; }
+  .tweet .avatars {
+    height: 80px;
+    width: 80px;
+    float: left;
+    border-radius: 5px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 25%; }
+  .tweet .name {
+    padding-left: 10px;
+    width: 50%;
+    margin-top: 0;
+    flex-basis: 50%; }
+  .tweet .content .text {
+    margin-left: 10px;
+    min-height: 50px;
+    word-wrap: break-word;
+    padding-right: 10px; }
+  .tweet footer {
+    font-size: 10px;
+    border-top: 1px solid rgba(175, 175, 175, 0.3);
+    display: flex;
+    justify-content: space-between; }
+    .tweet footer .created_at {
+      margin: 25px 0px 0px 10px;
+      height: 40px;
+      flex-basis: 75%; }
+    .tweet footer .likesCounter {
+      margin-top: 30px;
+      flex-basis: 5%; }
+  .tweet .twitterIcons {
+    flex-basis: 10%; }
+    .tweet .twitterIcons:hover #heart {
+      display: none; }
+    .tweet .twitterIcons:hover #heartFilled {
+      display: inline-block;
+      cursor: pointer; }
+  .tweet #heart {
+    width: 40px;
+    height: 40px;
+    float: right;
+    padding: 1px;
+    margin-top: 10px;
+    margin-right: 10px;
+    display: inline-block; }
+  .tweet #heartFilled {
+    display: none;
+    width: 40px;
+    height: 40px;
+    float: right;
+    padding: 1px;
+    margin-top: 10px;
+    margin-right: 10px; }
